@@ -4,7 +4,7 @@ import Map from 'ol/Map';
 import View from 'ol/View';
 import { OSM } from 'ol/Source';
 import TileLayer from 'ol/layer/Tile';
-import {transform} from 'ol/proj';
+import {fromLonLat} from 'ol/proj';
 
 @Component({
   selector: 'app-contacts',
@@ -25,15 +25,21 @@ export class ContactsComponent implements OnInit {
       ],
       target: "map",
       view: new View({
-        center: transform([10.4978811,-66.9010005],'EPSG:4326','EPSG:3857') ,
-        zoom: 30, maxZoom:100
+        center:  [1168493.0987877916, 10.497837180462023],
+        projection: 'EPSG:4326',
+        zoom: 18.50, 
+        maxZoom:100
     }),
       
   });
 
+  
+  /*let thismap = this.map;
   this.map.on('click', function(evt){
-    console.log(evt);
-  });
+    var newZoom = thismap.getView().getZoom();
+    console.log("Zoom: "+newZoom);
+    console.log(thismap.getView().getCenter());
+  });*/
   }
 
 

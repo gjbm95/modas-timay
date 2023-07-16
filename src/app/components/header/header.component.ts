@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
      var element = document.getElementById("aboutus");
      var elementPosition = element!!.offsetTop;
      window.scrollTo({
-        top: elementPosition -100, 
+        top: elementPosition -2, 
         behavior: "smooth"
      });
   }
@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
     var element = document.getElementById("contacts");
     var elementPosition = element!!.offsetTop;
     window.scrollTo({
-       top: elementPosition -100, 
+       top: elementPosition -2, 
        behavior: "smooth"
     });
   }
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
     var element = document.getElementById("products");
     var elementPosition = element!!.offsetTop;
     window.scrollTo({
-       top: elementPosition -100, 
+       top: elementPosition -2, 
        behavior: "smooth"
     });
   }
